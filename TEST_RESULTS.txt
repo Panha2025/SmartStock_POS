@@ -1,0 +1,13 @@
+SmartStock POS 2.0 — executed verification, 3 November 2026
+
+Original baseline: 13 Node tests passed; real browser regression then reproduced Add Product failure.
+After implementation:
+- npm run check: JavaScript syntax checks and 28 Node tests passed.
+- Playwright Chromium: 12 scenarios passed in one final suite, including real-browser legacy migration.
+- bash -n RUN_ON_MAC.command: passed.
+- Five-product acceptance calculations and isolated restore verified.
+- Offline writes and reload under /SmartStock_POS/ verified.
+- Phone (390px), tablet (768px), English/Khmer and receipt print CSS verified.
+
+See docs/DEVELOPMENT_REPORT.md for scope, numerical evidence and remaining verification limits.
+No claim is made of physical printer, Safari, Firefox, Edge or OS installation testing.

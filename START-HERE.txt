@@ -1,0 +1,20 @@
+SmartStock POS 2.0
+
+Install Node.js 20 or newer (Node.js 24 recommended).
+Open this folder in VS Code, open Terminal, then run:
+
+  npm start
+
+Open http://127.0.0.1:4173/
+Or use RUN_ON_MAC.command / RUN_ON_WINDOWS.bat.
+Do not open index.html directly. It needs the local HTTP server.
+No npm install is needed to run the app. Development tests need npm ci.
+
+Choose your currency in Settings BEFORE adding products.
+Add Product > enter details > Save Product. Reload to verify saved data.
+Sales supports multiple items, returns and voids. Restock changes require a reason.
+Backup > Backup Now exports a complete JSON copy. Keep it outside your browser.
+Clearing browser data or changing browsers/addresses may remove access to inventory.
+
+Read README.md for all features, testing, backups and limitations.
+Read docs/DEVELOPMENT_REPORT.md for implementation and verification results.

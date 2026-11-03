@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; object-src 'none'; base-uri 'self'; connect-src 'self'; form-action 'none'" />
+  <meta name="theme-color" content="#ffffff" />
+  <meta name="description" content="SmartStock - simple, private and offline-first inventory management. No account, no cloud, and no subscription." />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <link rel="icon" type="image/png" sizes="192x192" href="./assets/icon-192.png" />
+  <link rel="apple-touch-icon" href="./assets/icon-192.png" />
+  <link rel="manifest" href="./manifest.webmanifest" />
+  <link rel="stylesheet" href="./styles.css" />
+  <title>SmartStock — My Inventory</title>
+</head>
+<body>
+  <div id="app">
+    <header class="topbar">
+      <div class="brand-area">
+        <button id="mobile-menu" class="icon-btn menu-toggle" aria-label="Open menu" title="Menu">
+          <svg width="23" height="23" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16" /></svg>
+        </button>
+        <a href="#dashboard" class="brand" aria-label="SmartStock dashboard">
+          <div class="brand-mark"><svg viewBox="0 0 42 42" width="38" height="38" aria-hidden="true"><path fill="#2563eb" d="M21 2 39 12v18L21 40 3 30V12z"/><path fill="#60a5fa" d="m21 2 18 10-18 10L3 12z"/><path fill="#1d4ed8" d="M21 22v18L3 30V12z"/><path fill="#dbeafe" d="m12 7 18 10-8 4L4 11z"/><path fill="#ffffff" d="m21 22 18-10v4L21 26 3 16v-4z" opacity=".8"/></svg></div>
+          <span>SmartStock</span>
+        </a>
+        <span class="brand-divider"></span>
+        <span id="shop-label" class="shop-label">My Shop</span>
+      </div>
+      <div class="topbar-actions">
+        <span id="offline-badge" class="offline-pill" title="Your data is stored on this device">
+          <span class="offline-dot"></span><span>Local • Offline-first</span>
+        </span>
+        <button id="install-app" class="btn btn-outline btn-small" hidden>Install app</button><span class="vertical-rule"></span>
+        <div class="lang-toggle" aria-label="Select language">
+          <button id="lang-en" class="active" aria-label="English">EN</button>
+          <button id="lang-km" aria-label="Khmer">KH</button>
+        </div>
+      </div>
+    </header>
+    <div class="app-frame">
+      <div id="sidebar-backdrop" class="sidebar-backdrop"></div>
+      <aside class="sidebar" id="sidebar" aria-label="Main navigation">
+        <div id="side-group-label" class="side-group-label">WORKSPACE</div>
+        <nav id="side-nav" class="side-nav" aria-label="Main navigation">
+          <div class="loading-nav">Loading…</div>
+        </nav>
+        <div class="sidebar-bottom">
+          <div class="security-card">
+            <span class="security-card-icon">✦</span>
+            <strong id="privacy-title">Private by design</strong>
+            <p id="privacy-text">Data stays in this browser. No account required.</p>
+          </div>
+          <div class="side-footer"><span class="mini-dot"></span> SmartStock v2.0 · Local Edition</div>
+        </div>
+      </aside>
+      <main id="main" class="main-content" tabindex="-1" aria-live="polite">
+        <div class="loading-page"><div class="loader"></div><p>Opening local inventory…</p></div>
+      </main>
+    </div>
+  </div>
+  <div id="modal-root"></div>
+  <div id="toast-stack" class="toast-stack" role="status" aria-live="polite"></div>
+  <input type="file" id="restore-file" accept=".json,application/json" hidden />
+  <input type="file" id="csv-file" accept=".csv,text/csv" hidden />
+  <script src="./js/bootstrap.js"></script>
+  <script type="module" src="./js/app.js"></script>
+</body>
+</html>

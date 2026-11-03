@@ -1,0 +1,38 @@
+# Dependencies and generated test output
+node_modules/
+test-results/
+playwright-report/
+coverage/
+*.log
+.DS_Store
+Thumbs.db
+
+# Local records, downloads, credentials and tooling state
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.sqlite
+*.sqlite3
+*.sqlite-wal
+*.db
+*.db-shm
+*.db-wal
+backups/
+[Bb]ackup*/
+*[Bb]ackup*.json
+SmartStock_Before_Replacement_*.json
+smartstock-*.csv
+SmartStock_*.csv
+/*.csv
+/.aws/
+/.codex/
+/.agents/
+/.vscode/
+
+# Existing local reference files; no new license has been approved
+/design-reference.png
+/LICENSE
+/dist/
